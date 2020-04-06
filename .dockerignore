@@ -46,7 +46,7 @@ Dependencies.txt
 
 README.md
 CONTRIBUTING.md
-LICENSE-2.0.txt
+#LICENSE-2.0.txt
 
 # Native cmake build
 classes
@@ -56,7 +56,13 @@ lib
 bin
 packages
 build/
-examples/data
+examples/data/vector_packing
+examples/data/rcpsp
+examples/data/binpacking
+examples/data/spp
+examples/data/scp
+examples/data/roadef_challenge_2011
+examples/data/cvrptw
 
 # Editor directories and files
 *.user
