@@ -1,23 +1,15 @@
 # Project Files unneeded by docker
 .dockerignore
 
-ci/cache
-ci/docker
-ci/Makefile
-
 .git
 .gitignore
 
 .travis.yml
+.travis
 .appveyor.yml
 .github
 
 .clang-format
-
-binder
-tools/docker
-tools/release
-tools/win
 
 # Bazel
 bazel/doc
@@ -41,9 +33,12 @@ makefiles/docker
 makefiles/Makefile
 Makefile.local
 
+binder
 docs
+tools/docker
+tools/release
+tools/win
 Dependencies.txt
-
 README.md
 CONTRIBUTING.md
 #LICENSE-2.0.txt
