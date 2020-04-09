@@ -5,7 +5,7 @@ RUN yum -y update \
 && rm -rf /var/cache/yum
 
 FROM env AS devel
-WORKDIR /home/lib
+WORKDIR /home/project
 COPY . .
 
 FROM devel AS build
@@ -24,9 +24,7 @@ WORKDIR /home/sample
 COPY cmake/samples/java .
 
 FROM install_devel AS install_build
-RUN cmake -S. -Bbuild -DBUILD_DOTNET=ON
-RUN cmake --build build --target all -v
-RUN cmake --build build --target install
+RUN mvn compile
 
 FROM install_build AS install_test
-RUN cmake --build build --target test
+RUN mvn test
